@@ -1,6 +1,12 @@
-import pygame
+from src.engine.game_engine import GameEngine
+from src.interfaces.terminal_interface import TerminalInterface
 
-pygame.init()
 
-if __name__ == '__main__':
-    ...
+def main():
+    game_engine = GameEngine(10, 10)
+    terminal_interface = TerminalInterface(game_engine)
+    terminal_interface.run()
+
+
+if __name__ == "__main__":
+    main()
